@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to Mars</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body class="text-black" style="background-color:whitesmoke;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Mission to Mars</h1>
+                <a class="btn btn-lg text-white" style="background-color:Blue;" href="/scrape" role="button">Scrape New
+                    Data</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Latest Mars News</h3> 
+                <h6 style="color: black">{{ mars_info.news_title }}</h6>
+                <p>{{ mars_info.news_paragraph }}</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

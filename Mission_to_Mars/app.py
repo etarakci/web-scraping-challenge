@@ -17,7 +17,25 @@ def home():
 
     # Find one record of data from the mongo database
     mars_info = mongo.db.collection.find_one()
+    # mars_info = "hello"
 
     # Return template and data
     return render_template("index.html", mars_info=mars_info)
+
+# Route that will trigger scrape functionç
+@app.route("/scrape")
+def scrape(): 
+
+    # Run scrapped functions
+    mars_info = mongo.db.mars_info
+
+    mars_data = scrape_mars.scrape()
+
+    mars_info.update({}, mars_data, upsert=True)
+
+
+    return redirect("/", code=302)
+
+if __name__ == "__main__": 
+    app.run(debug= True)
 

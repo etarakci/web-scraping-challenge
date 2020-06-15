@@ -115,16 +115,16 @@ def scrape_hemispheres():
 
 
 def scrape():
-    mars_info = {}
+    mars_data = {}
     news_title,news_p = scrape_news()
-    mars_info['news_title'] = news_title
-    mars_info['news_p'] = news_p
-    mars_info['featured_image_url'] = scrape_image()
-    mars_info['mars_weather'] = scrape_weather()
-    mars_info['mars_html_table'] = scrape_facts()
-    mars_info['hemisphere_image_urls'] = scrape_hemispheres()
-    
-    return mars_info
+    mars_data['news_title'] = news_title
+    mars_data['news_p'] = news_p
+    mars_data['featured_image_url'] = scrape_image()
+    mars_data['mars_weather'] = scrape_weather()
+    mars_data['mars_html_table'] = scrape_facts()
+    mars_data['hemisphere_image_urls'] = scrape_hemispheres()
+
+    return mars_data
 
 
 
